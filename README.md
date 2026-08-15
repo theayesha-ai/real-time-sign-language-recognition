@@ -1,17 +1,58 @@
-# Sign Language Detection Model with TensorFlow, Keras, OpenCV and Mediapipe 🖐️
+# 🤟 Real-Time Sign Language Recognition
 
-![](./sign_language.gif)
+A real-time Sign Language Recognition system built using **Python, OpenCV, MediaPipe, and Machine Learning**.
 
-## Computer Vision Sign Language Detection Model with TensorFlow, Keras, OpenCV and Mediapipe 
+The project uses a webcam to detect a hand, extract hand landmarks using MediaPipe, and classify predefined sign-language gestures in real time.
 
-This Computer Vision Model, detects the letters of the Sign Language. It can recognizes the letters "A", "B", "L", "H" and "O".
 
-The Model was trained with more than 1500 Images, 300 Images from each Sign Language Letter, and using Transfer Learning, from the CNN VGG-16 TensorFlow Model.
+## 🎥 Demo
 
-Mediapipe detects any Hand from the Image, then is cropped, and last the Model classifies which letter is of the Sign Language.
+### Real-Time Sign Language Recognition Demo
 
-The code to collect any Sign Language Letter Image of the Hand is the `data_collection.ipynb` file and the code of the Model is in the `sign_language_model.ipynb` file.
+▶️ **[Watch the Demo Video](./demo/sign_language_demo.mp4)**
 
-## Check-it out
-- Sign Language Detection Model Preview: https://www.youtube.com/watch?v=pqRB8yQv9lk
+The 40-second demo shows the system recognizing the trained hand signs through a webcam in real time.
 
+
+## ✨ Features
+
+- 🤟 Real-time sign language recognition
+- 📷 Webcam-based hand detection
+- 🖐️ Hand landmark detection using MediaPipe
+- 🤖 Machine Learning-based classification
+- ⚡ Real-time prediction
+- 📊 Custom sign-language dataset
+- 🎯 Recognition of 5 custom sign class
+
+## 🤟 Supported Signs
+
+The current model recognizes the following five trained sign classes:
+
+| Sign Label | Gesture |
+|------------|---------|
+| **A** | ✋ |
+| **B** | ☝️ |
+| **C** | 🤟 |
+| **D** | ✋ |
+| **E** | 🖐️ |
+
+> These are the custom gestures used to collect the dataset and train the model.
+
+## 🧠 How It Works
+
+The system follows this pipeline:
+
+text
+Webcam
+   ↓
+OpenCV
+   ↓
+MediaPipe Hand Detection
+   ↓
+21 Hand Landmarks
+   ↓
+Feature Extraction
+   ↓
+Trained Machine Learning Model
+   ↓
+Predicted Sign
