@@ -1,58 +1,85 @@
-# 🤟 Real-Time Sign Language Recognition
+🖐️ Real-Time Sign Language & Color Recognition
 
-A real-time Sign Language Recognition system built using **Python, OpenCV, MediaPipe, and Machine Learning**.
+A real-time computer vision project that uses a webcam to recognize predefined hand signs and colors.
 
-The project uses a webcam to detect a hand, extract hand landmarks using MediaPipe, and classify predefined sign-language gestures in real time.
+🚀 Features
 
+🖐️ Sign Language Recognition
 
-## 🎥 Demo
+The system recognizes:
 
-### Real-Time Sign Language Recognition Demo
+- A
+- B
+- C
+- D
+- E
+- Hello
+- Yes
+- No
+- Thank You
+- I Love You
 
-▶️ **[Watch the Demo Video](./demo/sign_language_demo.mp4)**
+🎨 Color Recognition
 
-The 40-second demo shows the system recognizing the trained hand signs through a webcam in real time.
+The system recognizes:
 
+- 🔴 Red
+- 🔵 Blue
+- 🟡 Yellow
+- 🟢 Green
 
-## ✨ Features
+## 🛠️ Technologies Used
 
-- 🤟 Real-time sign language recognition
-- 📷 Webcam-based hand detection
-- 🖐️ Hand landmark detection using MediaPipe
-- 🤖 Machine Learning-based classification
-- ⚡ Real-time prediction
-- 📊 Custom sign-language dataset
-- 🎯 Recognition of 5 custom sign class
+- Python
+- TensorFlow / Keras
+- OpenCV
+- MediaPipe
+- NumPy
+- Machine Learning
+- Computer Vision
 
-## 🤟 Supported Signs
+## ⚙️ How It Works
 
-The current model recognizes the following five trained sign classes:
+1. The webcam captures the user's hand.
+2. MediaPipe detects hand landmarks.
+3. The trained machine learning model processes the hand landmarks.
+4. The system predicts the corresponding hand sign.
+5. OpenCV displays the prediction in real time.
+6. The application can also detect predefined colors.
 
-| Sign Label | Gesture |
-|------------|---------|
-| **A** | ✋ |
-| **B** | ☝️ |
-| **C** | 🤟 |
-| **D** | ✋ |
-| **E** | 🖐️ |
+🎯 Recognized Signs
 
-> These are the custom gestures used to collect the dataset and train the model.
+| Sign | Prediction |
+|---|---|
+| A | A |
+| B | B |
+| C | C |
+| D | D |
+| E | E |
+| 👋 | Hello |
+| 👍 | Yes |
+| 👎 | No |
+| 🙏 | Thank You |
+| ❤️ | I Love You |
 
-## 🧠 How It Works
+🎨 Recognized Colors
 
-The system follows this pipeline:
+| Color | Prediction |
+|---|---|
+| 🔴 | Red |
+| 🔵 | Blue |
+| 🟡 | Yellow |
+| 🟢 | Green |
+
+💻 Project Structure
 
 text
-Webcam
-   ↓
-OpenCV
-   ↓
-MediaPipe Hand Detection
-   ↓
-21 Hand Landmarks
-   ↓
-Feature Extraction
-   ↓
-Trained Machine Learning Model
-   ↓
-Predicted Sign
+real-time-sign-language-recognition/
+│
+├── dataset/
+├── model/
+├── demo/
+├── src/
+├── requirements.txt
+├── README.md
+└── ...
